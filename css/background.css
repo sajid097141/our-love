@@ -1,0 +1,249 @@
+/* ==========================
+        GLOBAL BACKGROUND
+========================== */
+
+body{
+
+    background:#02040b;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* Whole animated background */
+
+#background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-100;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top right,#24113f 0%,transparent 30%),
+        radial-gradient(circle at bottom left,#071329 0%,transparent 35%),
+        #02040b;
+
+}
+
+/* Moon Glow */
+
+.moonGlow{
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-120px;
+
+    right:-120px;
+
+    filter:blur(80px);
+
+}
+
+/* Stars */
+
+.star{
+
+    position:absolute;
+
+    width:2px;
+
+    height:2px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.8);
+
+}
+
+
+/*==========================
+      CURSOR GLOW
+==========================*/
+
+#cursorGlow{
+
+position:fixed;
+
+width:250px;
+
+height:250px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(255,77,109,.18),
+transparent 70%);
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+transition:left .15s linear,
+top .15s linear;
+
+filter:blur(30px);
+
+}
+
+/*==========================
+      STARS
+==========================*/
+
+.star{
+
+position:absolute;
+
+border-radius:50%;
+
+background:white;
+
+animation:twinkle infinite ease-in-out;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+
+/*==========================
+      PARTICLES
+==========================*/
+
+.particle{
+
+position:absolute;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+animation:particleFloat linear infinite;
+
+}
+
+@keyframes particleFloat{
+
+0%{
+
+transform:translateY(0) scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.8;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+/*==========================
+    SHOOTING STAR
+==========================*/
+
+.shooting-star{
+
+position:absolute;
+
+width:180px;
+
+height:2px;
+
+background:linear-gradient(to right,
+white,
+transparent);
+
+transform:rotate(-25deg);
+
+animation:shoot 2.2s linear forwards;
+
+box-shadow:0 0 12px white;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+transform:
+translate(-200px,-100px)
+rotate(-25deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translate(140vw,70vh)
+rotate(-25deg);
+
+opacity:0;
+
+}
+
+}
+
+/*==========================
+      FADE SECTIONS
+==========================*/
+
+section{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:
+1s ease;
+
+}
+
+section.visible{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
