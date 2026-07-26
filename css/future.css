@@ -1,0 +1,454 @@
+/*======================================
+        FUTURE PAGE
+======================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+
+    180deg,
+
+    #404d4d 0%,
+
+    #8aa6bc 30%,
+
+    #C9D6FF 70%,
+
+    #6C7FD8 100%
+
+    );
+
+    color:white;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/*==============================
+        BACKGROUND
+==============================*/
+
+#background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    overflow:hidden;
+
+}
+
+.sunGlow{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    left:50%;
+
+    top:-300px;
+
+    transform:translateX(-50%);
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,255,255,.9),
+
+    rgba(255,215,160,.5),
+
+    transparent 70%);
+
+    filter:blur(120px);
+
+    animation:sunFloat 12s ease-in-out infinite;
+
+}
+
+@keyframes sunFloat{
+
+0%,100%{
+
+transform:translateX(-50%) translateY(0);
+
+}
+
+50%{
+
+transform:translateX(-50%) translateY(20px);
+
+}
+
+}
+
+/*==============================
+        HERO
+==============================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+.hero h3{
+
+    font-weight:300;
+
+    letter-spacing:4px;
+
+    color:#FFF6E9;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:5rem;
+
+    margin-bottom:25px;
+
+}
+
+.subtitle{
+
+    font-size:1.3rem;
+
+    line-height:2;
+
+    color:#FFFDF8;
+
+}
+
+/*==============================
+      PHOTO FRAME
+==============================*/
+
+.future-photo{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:80px 20px;
+
+}
+
+.frame{
+
+    width:340px;
+
+    background:rgb(82, 136, 152);
+
+    padding:18px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.photo-placeholder{
+
+    height:470px;
+
+    border:3px dashed #DDD;
+
+    border-radius:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#FAFAFA;
+
+    color:#777;
+
+    font-size:1.2rem;
+
+}
+
+.photo-placeholder{
+
+    font-size:5rem;
+
+}
+
+.photo-placeholder span{
+
+    font-size:1rem;
+
+    margin-top:20px;
+
+    text-align:center;
+
+    line-height:1.8;
+
+}
+
+/*==============================
+       MEMORY CARD
+==============================*/
+
+.future-memory{
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:60px 20px;
+
+}
+
+.memory-card{
+
+    width:700px;
+
+    max-width:90%;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:25px;
+
+    padding:50px;
+
+    box-shadow:
+
+    0 15px 45px rgba(0,0,0,.18);
+
+}
+
+.memory-card h2{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:45px;
+
+    font-size:2.6rem;
+
+}
+
+.line{
+
+    margin:35px 0;
+
+}
+
+.line span{
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.line div{
+
+    border-bottom:2px dashed rgba(255,255,255,.8);
+
+}
+
+/*==============================
+        LETTER
+==============================*/
+
+.letter{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:90px 30px;
+
+    text-align:center;
+
+}
+
+.letter h2{
+
+    font-size:3rem;
+
+    margin-bottom:40px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.letter p{
+
+    font-size:1.2rem;
+
+    line-height:2.2;
+
+}
+
+/*==============================
+         QUOTE
+==============================*/
+
+.quote{
+
+    padding:120px 30px;
+
+    text-align:center;
+
+}
+
+.quote h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3.8rem;
+
+    font-weight:600;
+
+}
+
+/*==============================
+        BUTTON
+==============================*/
+
+.ending{
+
+    text-align:center;
+
+    padding-bottom:120px;
+
+}
+
+#futureBtn{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:1.1rem;
+
+    background:rgb(122, 145, 70);
+
+    color:#4A5CC5;
+
+    transition:.35s;
+
+}
+
+#futureBtn:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    box-shadow:
+
+    0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/*==============================
+        FOOTER
+==============================*/
+
+footer{
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:#F9F5EF;
+
+    font-size:1rem;
+
+    line-height:2;
+
+}
+
+/*==============================
+      MOBILE
+==============================*/
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:3.3rem;
+
+}
+
+.subtitle{
+
+font-size:1.05rem;
+
+}
+
+.quote h2{
+
+font-size:2.5rem;
+
+}
+
+.memory-card{
+
+padding:30px;
+
+}
+
+.photo-placeholder{
+
+height:380px;
+
+}
+
+}
+
+
+
+
+

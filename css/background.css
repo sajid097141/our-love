@@ -1,0 +1,201 @@
+/*======================================
+      CINEMATIC BACKGROUND V2
+======================================*/
+
+body{
+    margin:0;
+    background:#02040b;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Background */
+
+#background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 80% 10%,
+        rgba(73,42,120,.28),
+        transparent 30%),
+
+        radial-gradient(circle at 15% 100%,
+        rgba(10,45,90,.35),
+        transparent 40%),
+
+        linear-gradient(
+        180deg,
+        #02040b,
+        #040817,
+        #02040b);
+}
+
+/* Canvas */
+
+#sky{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+}
+
+/* Moon Glow */
+
+.moonGlow{
+    position:absolute;
+    top:-220px;
+    right:-220px;
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+        circle,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.03),
+        transparent 75%);
+
+    filter:blur(120px);
+
+    animation:moonFloat 18s ease-in-out infinite;
+}
+
+@keyframes moonFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/*======================================
+            CLOUDS
+======================================*/
+
+.cloudLayer{
+
+    position:absolute;
+
+    width:220%;
+    height:320px;
+
+    left:-60%;
+
+    opacity:.12;
+
+    filter:blur(90px);
+
+    background:
+        radial-gradient(
+        circle,
+        rgba(255,255,255,.6),
+        transparent 65%);
+
+}
+
+.cloud1{
+
+    top:12%;
+
+    animation:cloudMove1 110s linear infinite;
+
+}
+
+.cloud2{
+
+    top:48%;
+
+    opacity:.05;
+
+    animation:cloudMove2 150s linear infinite;
+
+}
+
+@keyframes cloudMove1{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-35%);
+    }
+
+}
+
+@keyframes cloudMove2{
+
+    from{
+        transform:translateX(-20%);
+    }
+
+    to{
+        transform:translateX(20%);
+    }
+
+}
+
+/*======================================
+         STORY CONTENT
+======================================*/
+
+#story{
+
+    position:relative;
+    z-index:5;
+
+}
+
+/* For pages that use .content instead */
+
+.content{
+
+    position:relative;
+    z-index:5;
+
+}
+
+.earphones{
+
+    position:relative;
+    z-index:5;
+
+}
+
+/*======================================
+         FADE ANIMATION
+======================================*/
+
+section{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+section.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
